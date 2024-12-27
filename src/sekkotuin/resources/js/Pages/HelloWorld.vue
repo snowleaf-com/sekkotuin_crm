@@ -1,11 +1,5 @@
-<script>
-export default {
-    data() {
-        return {
-            greeting: "テストです",
-        };
-    },
-};
+<script setup lang="ts">
+const greeting:string = "テストですだよだよです";
 </script>
 
 <template>
