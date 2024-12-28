@@ -3,18 +3,17 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { Link, useForm, usePage } from '@inertiajs/vue3';
+import { Link, useForm } from '@inertiajs/inertia-vue3';
 
 const props = defineProps({
     mustVerifyEmail: Boolean,
     status: String,
+    user: Object
 });
 
-const user = usePage().props.auth.user;
-
 const form = useForm({
-    name: user.name,
-    email: user.email,
+    name: props.user.name,
+    email: props.user.email,
 });
 </script>
 
