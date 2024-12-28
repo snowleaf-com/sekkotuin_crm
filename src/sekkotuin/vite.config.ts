@@ -22,6 +22,7 @@ export default defineConfig({
         watch: {
             usePolling: true,
         },
-        port:5173
+        port:5173,
+        strictPort: true, // 必ず 5173 ポートを使用
     }
 });

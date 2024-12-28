@@ -33,7 +33,10 @@
       "@/*": ["resources/js/*"]
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
-    // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/resources/js/types"  // または "./types" (配置場所に応じて)
+    ],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
     // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
@@ -111,7 +114,8 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "allowJs": true, //このオプションを有効にすると、TypeScriptコンパイラがJavaScriptファイル（.js や .jsx）を許容するようになります。デフォルトでは false になっており、TypeScriptファイル（.ts や .tsx）のみが扱われます。
     "types": [ //types オプションは、プロジェクトで使用する型定義ファイル（.d.ts）を指定するためのものです。ここでは、Viteの型定義である vite/client を指定しています。
-      "vite/client"
+      "vite/client",
+      "@inertiajs/inertia-vue3"
     ]
   },
   "include": ["resources/js/**/*"], //TypeScriptコンパイラが型チェックやトランスパイルの対象とするファイルやフォルダを指定します。ここでは、resources/js 以下のすべてのファイル（**/* はサブディレクトリも含む）を対象にしています。
